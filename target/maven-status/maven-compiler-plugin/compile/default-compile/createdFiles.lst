@@ -1,0 +1,4 @@
+com\agnicore\utils\sendmail\ISendEmailService.class
+com\agnicore\utils\sendmail\Runner.class
+com\agnicore\utils\sendmail\Main.class
+com\agnicore\utils\sendmail\SendEmailService.class

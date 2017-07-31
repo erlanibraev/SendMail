@@ -1,0 +1,45 @@
+2017-07-29 14:43:21.835  INFO 9380 --- [main] com.agnicore.utils.sendmail.Main         : Starting Main on CRAZYROGUE with PID 9380 (D:\projects\amnicore\SendMail\target\classes started by mad in D:\projects\amnicore\SendMail)
+2017-07-29 14:43:21.838  INFO 9380 --- [main] com.agnicore.utils.sendmail.Main         : No active profile set, falling back to default profiles: default
+2017-07-29 14:43:21.879  INFO 9380 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1033576a: startup date [Sat Jul 29 14:43:21 ALMT 2017]; root of context hierarchy
+2017-07-29 14:43:22.430  INFO 9380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-29 14:43:22.441  INFO 9380 --- [main] com.agnicore.utils.sendmail.Runner       : Send message
+2017-07-29 14:43:36.633  INFO 9380 --- [main] com.agnicore.utils.sendmail.Runner       : Send sucessfull
+2017-07-29 14:43:36.636  INFO 9380 --- [main] com.agnicore.utils.sendmail.Main         : Started Main in 15.021 seconds (JVM running for 15.591)
+2017-07-29 14:43:36.638  INFO 9380 --- [Thread-4] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1033576a: startup date [Sat Jul 29 14:43:21 ALMT 2017]; root of context hierarchy
+2017-07-29 14:43:36.640  INFO 9380 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-07-29 15:00:01.793  INFO 2120 --- [main] com.agnicore.utils.sendmail.Main         : Starting Main on CRAZYROGUE with PID 2120 (D:\projects\amnicore\SendMail\target\classes started by mad in D:\projects\amnicore\SendMail)
+2017-07-29 15:00:01.797  INFO 2120 --- [main] com.agnicore.utils.sendmail.Main         : No active profile set, falling back to default profiles: default
+2017-07-29 15:00:01.841  INFO 2120 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1033576a: startup date [Sat Jul 29 15:00:01 ALMT 2017]; root of context hierarchy
+2017-07-29 15:00:02.385  INFO 2120 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-29 15:00:02.395  INFO 2120 --- [main] com.agnicore.utils.sendmail.Runner       : Send message
+2017-07-29 15:05:02.554  INFO 2120 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-07-29 15:05:02.567 ERROR 2120 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:735) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:716) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:703) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.agnicore.utils.sendmail.Main.main(Main.java:13) [classes/:na]
+Caused by: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not connect to SMTP host: smtp.mail.ru, port: 465, response: -1. Failed messages: javax.mail.MessagingException: Could not connect to SMTP host: smtp.mail.ru, port: 465, response: -1
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432) ~[spring-context-support-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:345) ~[spring-context-support-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:340) ~[spring-context-support-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at com.agnicore.utils.sendmail.SendEmailService.send(SendEmailService.java:34) ~[classes/:na]
+	at com.agnicore.utils.sendmail.Runner.run(Runner.java:26) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:732) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	... 6 common frames omitted
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.mail.ru, port: 465, response: -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2106) ~[javax.mail-1.5.6.jar:1.5.6]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712) ~[javax.mail-1.5.6.jar:1.5.6]
+	at javax.mail.Service.connect(Service.java:366) ~[javax.mail-1.5.6.jar:1.5.6]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501) ~[spring-context-support-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421) ~[spring-context-support-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 11 common frames omitted
+
+2017-07-29 15:05:02.568  INFO 2120 --- [main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1033576a: startup date [Sat Jul 29 15:00:01 ALMT 2017]; root of context hierarchy
+2017-07-29 15:05:02.569  INFO 2120 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
